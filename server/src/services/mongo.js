@@ -1,4 +1,8 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
+
+
 
 mongoose.connection.once("open", () => {
     console.log("Connection ready!");
@@ -9,7 +13,7 @@ mongoose.connection.on("error", (err) => {
 })
 
 async function mongooseConnection(){
-    await mongoose.connect("mongodb+srv://Olayinka:idumu_1990@cluster0.axjfq.mongodb.net/nasa?retryWrites=true&w=majority", {
+    await mongoose.connect(process.env.MONGODB_DATABASE, {
             useNewUrlParser: true,
             useUnifiedTopology: true
     })
