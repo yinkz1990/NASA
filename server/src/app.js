@@ -20,11 +20,8 @@ app.use(express.static(path.join(__dirname, "..", 'public')));
 
 app.use('/planets', planetRouter);
 app.use('/launches', launchRouter);
-
-if(process.env.NODE_ENV === 'production'){
-
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
     });
-}
+
 module.exports = app;
