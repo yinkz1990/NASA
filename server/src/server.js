@@ -4,9 +4,7 @@ const {mongooseConnection} = require("./services/mongo");
 const { promisePlanet} = require('./models/planets.model');
 const { loadSpaceXData } = require('./models/launches.model');
 
-
 const server = http.createServer(app);
-const port = process.env.Port || 8000;
 
 
 
@@ -16,7 +14,7 @@ async function startServer () {
     await loadSpaceXData();
         
     
-    server.listen(port, () => {
+    server.listen(process.env.PORT, '0.0.0.0', () => {
             console.log("We are connected");
         })
        
