@@ -7,11 +7,8 @@ const launchRouter = require('./routes/launches/launches.router')
 
 const app = express();
 
-
 app.use(cors({
-    origin: 'http://localhost:3000',
-    origin: 'http://localhost:8000',
-    origin: 'https://ancient-refuge-83380.herokuapp.com'
+    origin: "*",
 }))
 
 app.use(morgan('combined'));

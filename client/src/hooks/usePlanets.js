@@ -7,13 +7,14 @@ function usePlanets() {
 
   const getPlanets = useCallback(async () => {
     const fetchedPlanets = await httpGetPlanets();
-    savePlanets(fetchedPlanets.data);
+    savePlanets(fetchedPlanets);
   }, []);
 
   useEffect(() => {
     getPlanets();
   }, [getPlanets]);
 
+  console.log(planets);
   return planets;
 }
 

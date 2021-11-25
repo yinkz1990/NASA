@@ -14,7 +14,7 @@ async function startServer () {
     await loadSpaceXData();
         
     
-    server.listen(process.env.PORT, '0.0.0.0', () => {
+    server.listen(process.env.PORT || 8000, '0.0.0.0', () => {
             console.log("We are connected");
         })
        
