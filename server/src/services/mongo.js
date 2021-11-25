@@ -13,7 +13,7 @@ mongoose.connection.on("error", (err) => {
 })
 
 async function mongooseConnection(){
-    await mongoose.connect("mongodb+srv://Olayinka:idumu_1990@cluster0.axjfq.mongodb.net/nasa?retryWrites=true&w=majority", {
+    await mongoose.connect(`mongodb+srv:${process.env.MONGODB_CONNECTION}`, {
             useNewUrlParser: true,
             useUnifiedTopology: true
     })
