@@ -5,7 +5,7 @@ const History = props => {
   const tableBody = useMemo(() => {
     return props.launches?.filter((launch) => !launch.upcoming)
       .map((launch) => {
-        return <tr key={String(launch.flightNumber)}>
+        return <tr  className="history" key={String(launch.flightNumber)}>
           <td>
             <span style={
               {color: launch.success ? "greenyellow" : "red"}
@@ -35,30 +35,7 @@ const History = props => {
             </tr>
           </thead>
           <tbody>
-            <tr  className="history">
-          <td>
-            <span style={
-              {color: "red"}
-            }>█</span>
-          </td>
-          <td>Hello</td>
-          <td>2/89/2092</td>
-          <td>mission</td>
-          <td>rocket</td>
-          <td>customer</td>
-          </tr>
-          <tr  className="history">
-          <td>
-            <span style={
-              {color: "green"}
-            }>█</span>
-          </td>
-          <td>Hello</td>
-          <td>2/89/2092</td>
-          <td>mission</td>
-          <td>rocket</td>
-          <td>customer</td>
-          </tr>
+            {tableBody}
           </tbody>
         </table>
     </Appear>
