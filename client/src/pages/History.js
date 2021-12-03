@@ -23,12 +23,11 @@ const History = props => {
   return <article id="history">
     <Appear animate show={props.entered}>
       <Paragraph>History of mission launches including SpaceX launches starting from the year 2006.</Paragraph>
-      <Table animate>
         <table style={{tableLayout: "fixed"}}>
           <thead>
             <tr>
-              <th style={{width: "2rem"}}></th>
-              <th style={{width: "3rem"}}>No.</th>
+              <th style={{width: "5rem"}}></th>
+              <th style={{width: "5rem"}}>No.</th>
               <th style={{width: "9rem"}}>Date</th>
               <th>Mission</th>
               <th style={{width: "7rem"}}>Rocket</th>
@@ -36,10 +35,32 @@ const History = props => {
             </tr>
           </thead>
           <tbody>
-            {tableBody}
+            <tr  className="history">
+          <td>
+            <span style={
+              {color: "red"}
+            }>█</span>
+          </td>
+          <td>Hello</td>
+          <td>2/89/2092</td>
+          <td>mission</td>
+          <td>rocket</td>
+          <td>customer</td>
+          </tr>
+          <tr  className="history">
+          <td>
+            <span style={
+              {color: "green"}
+            }>█</span>
+          </td>
+          <td>Hello</td>
+          <td>2/89/2092</td>
+          <td>mission</td>
+          <td>rocket</td>
+          <td>customer</td>
+          </tr>
           </tbody>
         </table>
-      </Table>
     </Appear>
   </article>;
 }
