@@ -56,7 +56,7 @@ const Upcoming = props => {
             <th style={{width: "10rem"}}>Date</th>
             <th style={{width: "11rem"}}>Mission</th>
             <th style={{width: "11rem"}}>Rocket</th>
-            <th>Destination</th>
+            <th style={{width: "11rem"}}>Destination</th>
           </tr>
         </thead>
         <tbody>
