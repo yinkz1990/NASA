@@ -40,7 +40,7 @@ const Upcoming = props => {
           <td>{new Date(launch.launchDate).toDateString()}</td>
           <td>{launch.mission}</td>
           <td>{launch.rocket}</td>
-          <td>{launch.target}</td>
+          <td>{launch.target ? launch.target : "None" }</td>
         </tr>;
       });
   }, [launches, abortLaunch, classes.link]);
@@ -53,7 +53,7 @@ const Upcoming = props => {
           <tr>
             <th style={{width: "3rem"}}></th>
             <th style={{width: "3rem"}}>No.</th>
-            <th style={{width: "10rem"}}>Date</th>
+            <th style={{width: "15rem"}}>Date</th>
             <th style={{width: "11rem"}}>Mission</th>
             <th style={{width: "11rem"}}>Rocket</th>
             <th style={{width: "11rem"}}>Destination</th>

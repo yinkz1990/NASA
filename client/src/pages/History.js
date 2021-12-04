@@ -28,7 +28,7 @@ const History = props => {
             <tr>
               <th style={{width: "5rem"}}></th>
               <th style={{width: "5rem"}}>No.</th>
-              <th style={{width: "9rem"}}>Date</th>
+              <th style={{width: "15rem"}}>Date</th>
               <th>Mission</th>
               <th style={{width: "7rem"}}>Rocket</th>
               <th>Customers</th>
