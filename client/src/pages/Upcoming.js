@@ -48,14 +48,14 @@ const Upcoming = props => {
   return <Appear id="upcoming" animate show={entered}>
     <Paragraph>Upcoming missions including both SpaceX launches and newly scheduled Zero to Mastery rockets.</Paragraph>
     <Words animate>Warning! Clicking on the ✖ aborts the mission.</Words>
-      <table style={{tableLayout: "fixed"}}>
+      <table style={{tableLayout: "fixed", fontSize:"20px"}}>
         <thead>
           <tr>
             <th style={{width: "3rem"}}></th>
             <th style={{width: "3rem"}}>No.</th>
             <th style={{width: "15rem"}}>Date</th>
-            <th style={{width: "11rem"}}>Mission</th>
-            <th style={{width: "11rem"}}>Rocket</th>
+            <th>Mission</th>
+            <th>Rocket</th>
             <th style={{width: "11rem"}}>Destination</th>
           </tr>
         </thead>
