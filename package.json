@@ -14,9 +14,9 @@
     "deploy": "npm run build --prefix client && npm start --prefix server",
     "test": "npm test --prefix server && npm test --prefix client",
     "deploy-cluster": " npm run build --prefix client && npm run cluster --prefix server",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm run cluster --prefix server"
   },
   "keywords": [],
-  "author": "Idumu Olayinka ",
+  "author": "Idumu Olayinka",
   "license": "ISC"
 }

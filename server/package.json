@@ -8,7 +8,7 @@
     "start": "node src/server.js",
     "test": "jest --detectOpenHandles",
     "test-watch": "jest --watch",
-    "cluster": "pm2 stop src/server.js -i max"
+    "cluster": "pm2 start src/server.js -i max"
   },
   "keywords": [],
   "author": "",
